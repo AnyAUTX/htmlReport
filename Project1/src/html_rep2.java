@@ -6,6 +6,20 @@ import java.io.File;
 
 		public static void main(String[] args) throws IOException    {
 			        String v1 = "45", v2 = "60",v3="75";
+			        long startTime = new Date().getTime();
+
+					// ... the code being measured starts ...
+
+					// sleep for 5 seconds
+					TimeUnit.SECONDS.sleep(5);
+
+					// ... the code being measured ends ...
+
+					long endTime = new Date().getTime();
+
+					long timeElapsed = endTime - startTime;
+
+					System.out.println("Execution time in milliseconds: " + timeElapsed);
 			        int r1 = 2222;
 			        String chead = "<html><title>Welcome to AnyAUT</title><body><h2>AnyAUT HTML Test Report 0.1</h2><p></p>";
 			        System.out.println(chead);
